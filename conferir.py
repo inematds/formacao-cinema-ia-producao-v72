@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Conferidor do INEMA Learning 7.12.15 — as MESMAS regras do assets/v72-conferidor.js (seção "conferidor").
+"""Conferidor do INEMA Learning 7.13.16 — as MESMAS regras do assets/v72-conferidor.js (seção "conferidor").
 
 O aluno escreve um arquivo (ficha, cartão, decupagem) e a página confere. Este script é a opção para quem tem
 terminal: confere o mesmo arquivo, com as regras escritas no JSON da aula.
@@ -18,7 +18,7 @@ Sai 0 quando passa ("OK: ...") e 1 quando falta algo. Regras (lista "regras" da 
               um_so: no máximo uma família por plano; variar: N famílias diferentes no conjunto;
               min: rótulo ("som:") só vale com >= min letras depois dele, até o próximo |
   duracao     {min, max}                     cada plano tem "N s"; a soma fica entre min e max
-  termos      {grupos: [{rot, termos}]}      o texto todo cita um termo de cada grupo
+  termos      {grupos: [{rot, termos, campo?}]}  o texto todo cita um termo de cada grupo (com campo: só a linha "Campo: …")
   video       {min, max, proporcao?, largura_min?}   7.12.15: modo vídeo — o argumento é o arquivo de vídeo
               (duração e tamanho pelo ffprobe); proporcao "16:9" ou lista ["16:9", "9:16"]; clipes de exemplo
               em video_ok / video_erro (caminhos no repo)
@@ -60,7 +60,7 @@ def nome_proporcao(w, h):
     if not w or not h:
         return "?"
     for nome, v in PROPORCOES.items():
-        if abs(w / h - v) / v <= 0.02:
+        if abs(w / h - v) / v <= 0.03:  # 7.13.16: 3 % (1280×704 do Wan 2.2 5B = 16:9; 2 % recusava)
             return nome
     from math import gcd
     g = gcd(int(w), int(h)) or 1
@@ -115,7 +115,9 @@ def norm(t):
 
 def familias(grupo):
     """['close / close-up / primeiro plano', 'plano médio'] → [['close', 'close-up', 'primeiro plano'], ['plano medio']]"""
-    return [[norm(x).strip() for x in fam.split("/") if x.strip()] for fam in grupo.get("termos", [])]
+    # 7.13.16: família com " / " (barra entre espaços) separa só ali, e o termo pode ter barra ("out/2026", "16:9")
+    return [[norm(x).strip() for x in (fam.split(" / ") if " / " in fam else fam.split("/")) if x.strip()]
+            for fam in grupo.get("termos", [])]
 
 
 def achados(linha, grupos):
@@ -219,7 +221,11 @@ def conferir(texto, sec, ui=None, lang="pt"):
         elif t == "termos":
             tudo = "\n".join(linhas)
             for gi, g in enumerate(r["grupos"]):
-                if not achados(tudo, r["grupos"])[gi]:
+                alvo = tudo
+                if g.get("campo"):  # 7.13.16: só a linha "Campo: …" conta
+                    pc = re.compile(r"^\s*[-*•]?\s*" + re.escape(norm(g["campo"])) + r"\s*:(.*)$")
+                    alvo = "\n".join((pc.match(norm(l)) or [None, ""])[1] for l in linhas)
+                if not achados(alvo, r["grupos"])[gi]:
                     faltas.append(fmt(T["conf_termo"], g=g["rot"]))
     if faltas:
         return False, T["conf_falta"], faltas

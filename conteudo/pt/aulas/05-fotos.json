@@ -66,7 +66,7 @@
           "detalhe": "Sem terminal: keyframes de escala e posição no editor (movimento 2D, estilo Ken Burns). Com terminal: as skills pixflow e diretor-animacao do INEMA fazem o parallax 2.5D e o look."
         }
       ],
-      "legenda": "Regras do diretor-animacao do INEMA: no máximo dois movimentos fortes seguidos, e o último plano é o mais calmo."
+      "legenda": "Regras do diretor-animacao do INEMA: nunca dois movimentos iguais vizinhos, movimento dramático só uma ou duas vezes no filme, e o último plano é o mais calmo."
     },
     {
       "tipo": "passos",
@@ -90,7 +90,7 @@
           "sub": "pelo que ela mostra",
           "texto": [
             "Paisagem aberta pede aproximação lenta ou travelling lateral; detalhe pede câmera parada ou aproximação curta; revelação pede afastamento.",
-            "Não empilhe movimentos fortes: depois de dois seguidos, uma foto parada. Foto com pessoa ganha parallax; desenho e ilustração ficam sem parallax, só com movimento plano."
+            "Não repita o mesmo movimento em fotos vizinhas, e guarde o movimento dramático (dolly zoom, crash zoom) para uma ou duas vezes no filme. Foto real ganha parallax; desenho e ilustração ficam sem parallax, só com movimento plano."
           ]
         },
         {
@@ -156,10 +156,10 @@
               "um_so": true,
               "variar": 3,
               "termos": [
-                "push in / push-in / push_in / aproximação lenta / dolly in / acercamiento lento",
-                "pull out / pull-out / pull_out / afastamento lento / dolly out / alejamiento lento",
+                "push in / push-in / push_in / aproximação lenta / aproximação / aproximar / dolly in / zoom in / acercamiento lento / acercamiento",
+                "pull out / pull-out / pull_out / afastamento lento / afastamento / afastar / dolly out / zoom out / alejamiento lento / alejamiento",
                 "ken burns / ken_burns",
-                "panorâmica / panorámica / panning shot",
+                "panorâmica / panorámica / panning shot / pan left / pan right / paneo",
                 "travelling lateral / travelling / tracking shot / truck / dolly lateral / tracking",
                 "tilt / tilt up / tilt down",
                 "pedestal / grua / crane / grúa",
@@ -188,7 +188,7 @@
         },
         {
           "tipo": "duracao",
-          "min": 20,
+          "min": 30,
           "max": 60
         }
       ],
@@ -216,7 +216,7 @@
           },
           {
             "rot": "Exemplo com erro (19/10/2026)",
-            "html": "<pre>$ python3 conferir.py fotos --errado; echo \"saída: $?\"\nAinda não. O que falta:\n - Achei 3 planos numerados; o pedido é de 4 a 12. Comece cada plano pelo número (1 | ...).\n - Plano 1: 2 escolhas de movimento; fique com uma só.\n - Plano 2: falta transição.\n - Plano 3: falta a foto.\n - Os planos somam 18 s; o pedido é de 20 a 60 s.\nsaída: 1</pre>"
+            "html": "<pre>$ python3 conferir.py fotos --errado; echo \"saída: $?\"\nAinda não. O que falta:\n - Achei 3 planos numerados; o pedido é de 4 a 12. Comece cada plano pelo número (1 | ...).\n - Plano 1: 2 escolhas de movimento; fique com uma só.\n - Plano 2: falta transição.\n - Plano 3: falta a foto.\n - Os planos somam 18 s; o pedido é de 30 a 60 s.\nsaída: 1</pre>"
           }
         ]
       }
@@ -228,17 +228,17 @@
       "exercicios": [
         {
           "id": "e1",
-          "titulo": "Folha de direção · 4 a 12 fotos",
+          "titulo": "Folha de direção · 4 a 12 fotos, 30 a 60 s",
           "min": "20 min",
           "texto": "Escreva a narração, marque o tempo de cada frase e preencha uma linha por foto com movimento, duração e transição. Cole em \"Confira a sua folha de direção\" e baixe o direcao-fotos.txt para a pasta do projeto.",
-          "pronto": "a página responde <code>OK: [n] fotos com movimento, transição e tempo · [s] s</code>, com a soma entre 20 e 60 s, e o arquivo está na pasta do projeto."
+          "pronto": "a página responde <code>OK: [n] fotos com movimento, transição e tempo · [s] s</code>, com a soma entre 30 e 60 s, e o arquivo está na pasta do projeto."
         },
         {
           "id": "e2",
           "titulo": "Render · a folha vira vídeo",
           "min": "40 min",
-          "texto": "Execute a folha no editor com keyframes (ou com a skill diretor-animacao, se você usa terminal), com a narração por baixo, e exporte em MP4 H.264. Confira o arquivo na seção \"Confira o seu curta\" da aula 8, que aceita de 30 a 60 s.",
-          "pronto": "a aula 8 responde <code>OK: [s] s · [w]×[h] · [p]</code> para o arquivo, se ele tiver de 30 a 60 s; se tiver menos, a página diz a duração lida e o que falta."
+          "texto": "Execute a folha no editor com keyframes (ou com a skill diretor-animacao, se você usa terminal), com a narração por baixo, e exporte em MP4 H.264. Confira o arquivo na seção \"Confira o seu curta\" da aula 8, que aceita os mesmos 30 a 60 s da folha.",
+          "pronto": "a seção \"Confira o seu curta\" da aula 8 responde <code>OK: [s] s · [w]×[h] · [p]</code> para o arquivo."
         }
       ]
     },
@@ -272,15 +272,15 @@
           "ref": "diagrama"
         },
         {
-          "p": "A sua folha tem push in, órbita e travelling lateral seguidos. O que o diretor-animacao recomenda?",
+          "p": "A sua folha tem push in, push in e órbita seguidos. O que o diretor-animacao recomenda?",
           "opcoes": [
-            "Manter: três movimentos fortes seguidos dão energia.",
-            "Trocar os três movimentos por fusões longas entre as fotos, para suavizar a sequência.",
-            "Trocar um deles por câmera parada: no máximo dois fortes seguidos.",
-            "Acelerar os três para caberem em menos tempo."
+            "Manter: repetir o movimento dá unidade à sequência de fotos.",
+            "Trocar as três transições por fusões longas, para suavizar a sequência.",
+            "Trocar um dos push in: nunca dois movimentos iguais em fotos vizinhas.",
+            "Acelerar os três movimentos para caberem em menos tempo."
           ],
           "certa": 2,
-          "explica": "Movimento forte em sequência cansa e tira o peso de cada um. Uma foto parada no meio devolve o respiro.",
+          "explica": "Movimento repetido em vizinhas deixa o filme mecânico. Troque um deles por outro movimento ou por câmera parada.",
           "ref": "passos"
         },
         {

@@ -63,7 +63,7 @@
           "titulo": "Grão",
           "sub": "por último",
           "icone": "check",
-          "detalhe": "Grão, halation e proporção de tela entram no fim. Grão não uniforme e igual em todos os planos; halation (a coroa avermelhada em volta da luz forte) só quando há uma fonte de luz no quadro."
+          "detalhe": "Grão, halation e proporção de tela entram no fim. Grão com a textura irregular do filme, na mesma intensidade em todos os planos; halation (a coroa avermelhada em volta da luz forte) só quando há uma fonte de luz no quadro."
         }
       ],
       "legenda": "Guarde o look num arquivo de cor (LUT, extensão .cube) ou num predefinido do editor e aplique o mesmo em todos os planos."
@@ -192,7 +192,7 @@
           "id": "e2",
           "titulo": "Look aplicado · a montagem com cor",
           "min": "30 min",
-          "texto": "No editor, aplique a receita à montagem da aula 3: primeiro iguale os planos, depois contraste e cor, por último o grão. Exporte de novo em MP4 H.264 e confira o arquivo na aula 3.",
+          "texto": "No editor, aplique a receita à montagem da aula 3 (antes de queimar a legenda): primeiro iguale os planos, depois contraste e cor, por último o grão. Exporte de novo em MP4 H.264 e confira o arquivo na aula 3.",
           "pronto": "a seção \"Confira a sua montagem\" da aula 3 responde <code>OK: …</code> para o arquivo com cor, e o arquivo está na pasta do projeto ao lado do cor.txt."
         }
       ]

@@ -77,7 +77,7 @@
           "titulo": "Escolher a estrutura",
           "sub": "cinco que funcionam",
           "texto": [
-            "Revisão: a pessoa usa e comenta. Confissão: problema, ritual, resultado. Rotina: o produto no dia a dia. Primeira reação: abrir a caixa e reagir. Teste selfie de 15 s: gancho de 2 s, um benefício, fecho casual.",
+            "Revisão: a pessoa usa e comenta. Confissão: problema, ritual, resultado. Rotina: o produto no dia a dia. Primeira reação: abrir a caixa e reagir. Teste selfie de 15 s: gancho curto, um benefício, fecho casual.",
             "Escolha pelo produto: o pão pede rotina (a manhã de quem compra) ou confissão (\"desisti do pão de mercado\")."
           ]
         },
@@ -93,7 +93,7 @@
           "titulo": "Produto sempre igual",
           "sub": "referência travada",
           "texto": [
-            "Trave um conjunto de referência do produto (uma foto principal e duas ou três de detalhe) e use em toda geração. Mude uma coisa por vez e gere um antes de gerar o lote.",
+            "Use as mesmas fotos de referência do produto (uma principal e duas ou três de detalhe) em toda geração, como o curso 1 ensina na aula de consistência. Mude uma coisa por vez e gere um antes do lote.",
             "Rótulo e texto do produto entram na montagem, não no prompt: o gerador costuma deformar letras. Confira cada plano: um produto só, mãos certas, rosto igual."
           ]
         },
@@ -180,7 +180,8 @@
               "rot": "o aviso de vídeo feito com IA (no Rótulo)",
               "termos": [
                 "feito com IA / gerado com IA / gerado por IA / criado com IA / conteúdo sintético / made with AI / AI-generated / generated with AI / created with AI / synthetic content / hecho con IA / generado con IA / generado por IA / creado con IA / contenido sintético"
-              ]
+              ],
+              "campo": "Rótulo"
             }
           ]
         }

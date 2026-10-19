@@ -38,33 +38,54 @@
     },
     "capa_alt": "Sala de edição escura com um monitor de corte mostrando a linha do tempo, fones de estúdio e uma claquete sobre a mesa.",
     "numeros": [
-      {"v": "8", "t": "aulas"},
-      {"v": "8", "t": "arquivos conferidos na página"},
-      {"v": "2", "t": "vídeos conferidos no navegador"},
-      {"v": "0", "t": "crédito gasto"}
+      {
+        "v": "8",
+        "t": "aulas"
+      },
+      {
+        "v": "8",
+        "t": "arquivos conferidos na página"
+      },
+      {
+        "v": "2",
+        "t": "vídeos conferidos no navegador"
+      },
+      {
+        "v": "0",
+        "t": "crédito gasto"
+      }
     ],
     "aulas_titulo": "As aulas",
     "aulas_sub": "A cena do curso 0, \"A primeira fornada\", vira um curta de 30 a 60 s. Quatro clipes de ensaio vêm prontos, para você montar sem gerar nada.",
     "blocos": [
-      {"t": "Para quem é", "itens": [
-        "Criadores, professores e quem faz vídeo para empresa.",
-        "Quem já tem uma decupagem (curso 0) ou já gera clipes (curso 1) e quer fechar o filme.",
-        "Quem não usa terminal: tudo se faz no navegador, num editor gratuito e num arquivo de texto."
-      ]},
-      {"t": "O que você sai fazendo", "itens": [
-        "Planejar batidas, fontes e entregas antes de gastar crédito.",
-        "Decidir o som de cada plano: o que sai junto com o vídeo e o que entra depois.",
-        "Montar, legendar e dar cor ao filme num editor gratuito.",
-        "Publicar com rótulo e com o direito de imagem, voz e música resolvido."
-      ]},
-      {"t": "A formação (6 cursos)", "itens": [
-        "0 · Direção: pensar como diretor",
-        "1 · Geração: imagem e vídeo com IA",
-        "2 · Produção (este curso)",
-        "3 · Motion por código com agente",
-        "4 · A fábrica de vídeo com agentes",
-        "5 · Sites cinematográficos"
-      ]}
+      {
+        "t": "Para quem é",
+        "itens": [
+          "Criadores, professores e quem faz vídeo para empresa.",
+          "Quem já tem uma decupagem (curso 0) ou já gera clipes (curso 1) e quer fechar o filme.",
+          "Quem não usa terminal: tudo se faz no navegador, num editor gratuito e num arquivo de texto."
+        ]
+      },
+      {
+        "t": "O que você sai fazendo",
+        "itens": [
+          "Planejar batidas, fontes e entregas antes de gastar crédito.",
+          "Decidir o som de cada plano: o que sai junto com o vídeo e o que entra depois.",
+          "Montar, legendar e dar cor ao filme num editor gratuito.",
+          "Publicar com rótulo e com o direito de imagem, voz e música resolvido."
+        ]
+      },
+      {
+        "t": "A formação (6 cursos)",
+        "itens": [
+          "0 · Direção: pensar como diretor",
+          "1 · Geração: imagem e vídeo com IA",
+          "2 · Produção (este curso)",
+          "3 · Motion por código com agente",
+          "4 · A fábrica de vídeo com agentes",
+          "5 · Sites cinematográficos"
+        ]
+      }
     ]
   },
   "ui": {
@@ -85,7 +106,7 @@
     "selo_real": "Exemplo do repositório",
     "pronto_quando": "Pronto quando:",
     "fiz": "Fiz este exercício",
-    "video_pagina": "Página do vídeo com roteiro",
+    "video_pagina": "Página do vídeo",
     "pergunta": "Pergunta",
     "de": "de",
     "cert_tag": "competência",

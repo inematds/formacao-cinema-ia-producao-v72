@@ -194,7 +194,7 @@
           "id": "e2",
           "titulo": "Legenda · queimada e revisada",
           "min": "20 min",
-          "texto": "Escreva uma frase de narração para a montagem, grave com a sua voz, gere a legenda no editor, revise e exporte de novo com a legenda queimada. Confira o novo arquivo.",
+          "texto": "Escreva uma frase de narração para a montagem, grave com a sua voz e gere a legenda no editor. Revise e exporte de novo com a legenda queimada; no filme final (aula 8), a legenda entra depois da cor.",
           "pronto": "a página continua respondendo <code>OK: …</code> para o novo arquivo e, ao tocar o vídeo, a legenda aparece no quadro com as palavras que você gravou."
         }
       ]

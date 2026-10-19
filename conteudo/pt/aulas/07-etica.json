@@ -205,13 +205,13 @@
         {
           "p": "Desde quando o artigo 50 do AI Act (rotulagem) vale na União Europeia?",
           "opcoes": [
-            "Desde 10/12/2024, quando o texto foi aprovado.",
+            "Desde 10/12/2024, quando o texto final foi aprovado.",
             "Ainda não vale: está em tramitação até 2027.",
             "Desde 02/08/2026.",
             "Desde 24/09/2026, junto com o fim da API do Sora."
           ],
           "certa": 2,
-          "explica": "O art. 50 vale desde 02/08/2026; o Código de Prática de rotulagem saiu em 10/06/2026. A data de 10/12/2024 é a da aprovação do PL 2338 no Senado brasileiro, outra lei.",
+          "explica": "O art. 50 vale desde 02/08/2026; o Código de Prática de rotulagem saiu em 10/06/2026. As outras datas não são dessa regra: 24/09/2026 é o fim da API do Sora.",
           "ref": "passos"
         },
         {
