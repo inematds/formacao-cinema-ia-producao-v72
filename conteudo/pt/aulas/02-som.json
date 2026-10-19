@@ -155,9 +155,9 @@
               "rot": "camada de som",
               "variar": 3,
               "termos": [
-                "ambiente / ambiência / ambient / ambience / room tone",
-                "efeito / efeitos / foley / sfx / sound effect / sound effects / efecto / efectos",
-                "fala / diálogo / dialogue / dialog / narração / narration / voz / voice / narración",
+                "ambiente / ambiência / ambient / ambience / room tone / ambient sound / sonido ambiente",
+                "efeito / efeitos / foley / sfx / effect / effects / sound effect / sound effects / efecto / efectos",
+                "fala / diálogo / dialogue / dialog / line / narração / narration / voz / voice / narración",
                 "trilha / música / music / score / soundtrack / banda sonora",
                 "silêncio / silence / silencio"
               ]
